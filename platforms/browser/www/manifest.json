@@ -1,0 +1,11 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "movieapp-jian0084",
+  "short_name": "movieapp-jian0084",
+  "version": "ca.edumedia.jian0084.movieapp",
+  "description": "A movie recommendation app using API of movie database.",
+  "author": "Joyce Jiang",
+  "icons": [],
+  "start_url": "index.html"
+}

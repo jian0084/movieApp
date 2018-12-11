@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, height=device-height" />-->
+
+    <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self' data: gap:   https://ssl.gstatic.com;
+    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; 
+    font-src 'self' data: https://fonts.gstatic.com https://fonts.googleapis.com;
+    script-src 'self' 'unsafe-eval';
+    connect-src 'self' ws: https://api.themoviedb.org/3/;
+    img-src 'self' data: content: https://image.tmdb.org;">
+
+    <title>Movie Recommendations</title>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+    <div class="wrapper">
+
+    </div>
+    <main>
+        <header>
+            <div>
+                <h3 id="elapsedTime"></h3>
+            </div>
+
+            <h1 class="title">Movie Recommendations</h1>
+
+            <div class="inline">
+                <div class="back-button hide">
+                    <img id="back-button" alt="Back Button" title="Back" data-src="img/chevron.svg" class="iconic iconic-md" />
+                </div>
+                <div class="modalButton">
+                    <img id="modalButton" alt="settings" title="settings" data-src="img/settings.svg" class="iconic iconic-md" />
+                </div>
+
+                <div class="search-input">
+                    <!--                    <i class="icon-search"></i>-->
+                    <input type="text" id="search-input" placeholder="search" />
+                </div>
+
+                <div class="search-button">
+                    <img id="search-button" alt="Search" title="Search" data-src="img/magnifying-glass.svg" class="iconic iconic-md" />
+                </div>
+            </div>
+
+        </header>
+
+        <div class="page" id="search-results">
+            <section class="title"></section>
+            <section class="content flex-container"></section>
+        </div>
+
+        <div class="page" id="recommend-results">
+            <section class="title"></section>
+            <section class="content flex-container"></section>
+        </div>
+    </main>
+
+    <div class="overlay hide">&nbsp;</div>
+
+    <div class="modal off">
+        <div class="modal-header">
+            <h2>Choose Movie or TV</h2>
+        </div>
+        <div class="modal-radio">
+            <input type="radio" name="video" value="movie" id="movie" checked>
+            <label for="movie">Movie</label>
+
+            <input type="radio" name="video" value="TV" id="TV">
+            <label for="TV">TV</label>
+        </div>
+
+        <button class="cancelButton">Cancel</button>
+        <button class="saveButton">Save</button>
+    </div>
+    <footer class="footer">
+        <div class="attribution">
+            <img class="attribution" alt="attribution" title="attribution" width="200" height=auto src="img/attribution.png">
+        </div>
+        <p>&copy;
+            <time datetime="2018">2018</time> Joyce Jiang</p>
+    </footer>
+
+    <script src="cordova.js"></script>
+<!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+    <scrpit src="js/jq.js"></scrpit>
+    <script src="js/iconic.min.js"></script>
+    <script src="js/key.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
